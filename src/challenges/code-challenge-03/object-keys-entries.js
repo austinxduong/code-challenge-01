@@ -7,3 +7,7 @@ export function sortedKeys(obj) {
     return a.length - b.length;
   });
 }
+
+export function getFilteredKey(obj) {
+  return Object.keys(obj).filter(key => key === 'age');
+}
