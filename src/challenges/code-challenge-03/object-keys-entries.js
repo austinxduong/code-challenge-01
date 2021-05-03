@@ -11,3 +11,7 @@ export function sortedKeys(obj) {
 export function getFilteredKey(obj) {
   return Object.keys(obj).filter(key => key === 'age');
 }
+
+export function getArrayOfKeysAndValues(obj) {
+  return Object.entries(obj);
+}
