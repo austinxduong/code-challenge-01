@@ -5,3 +5,8 @@ export function doubleNumbers(arr) {
 export function stringItUp(arr) {
   return arr.map(n => JSON.stringify(n));
 }
+
+export function capitalizeNames(arr) {
+  const lowercased = arr.map(n => n.toLowerCase());
+  return lowercased.map(n => n.charAt(0).toUpperCase() + n.substr(1).toLowerCase());
+}
