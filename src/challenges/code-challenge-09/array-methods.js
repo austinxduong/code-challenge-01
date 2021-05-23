@@ -8,3 +8,18 @@ export function howMuchPencil(string) {
   hello.push('');
   return hello;
 }
+
+export function wordsToCharList(str) {
+
+  const chars = str.split('');
+  return chars;
+
+}
+
+
+  
+
+
+
+
+  
