@@ -16,8 +16,19 @@ export function wordsToCharList(str) {
 
 }
 
+export function listFoods(receipe){
 
-  
+  const mapFunction = (ingredient) => {
+    const splitingredients = ingredient.split(' ');
+    const foodsplice = splitingredients.splice(2);
+    return foodsplice.join(' ');
+
+  };
+
+  const ingredients = receipe.ingredients.map(mapFunction); 
+
+  return ingredients;
+}
 
 
 
