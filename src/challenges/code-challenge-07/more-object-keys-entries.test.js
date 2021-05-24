@@ -1,4 +1,4 @@
-import { getHouses, updateNumbers, totalCharacters, hasChildrenEntries } from './more-object-keys-entries.js';
+import { getHouses, updateNumbers, totalCharacters, hasChildrenEntries, sortByChildren } from './more-object-keys-entries.js';
 
 const characters = [
   {
@@ -79,4 +79,8 @@ test('hasChildrenEntries', () => {
   expect(output2).toEqual(false);
 });
 
-
+test('sortByChildren', () => {
+  const input = characters; //arrange
+  const output = sortByChildren(input); //act
+  expect(output).toEqual([ {name: 'Euron', spouse: null, children: [], house: 'Greyjoy'}, { name: 'Jon S.', spouse: null, children: [],house: 'Snow'}, {name: 'Jon A.', spouse: 'Lysa', children: ['Robin'], house: 'Arryn'}, {name: 'Mace', spouse: 'Alerie', children: ['Margaery', 'Loras'], house: 'Tyrell'}, { name: 'Cersei',spouse: 'Robert', children: ['Joffrey', 'Myrcella', 'Tommen'], house: 'Lannister'}, {name: 'Daenarys', spouse: 'Khal Drogo', children: ['Drogon', 'Rhaegal', 'Viserion'], house: 'Targaryen'}, {name: 'Eddard', spouse: 'Catelyn', children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'], house: 'Stark'}]); //assert
+});
