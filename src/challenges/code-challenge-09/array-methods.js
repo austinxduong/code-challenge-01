@@ -31,6 +31,11 @@ export function listFoods(receipe){
 }
 
 
+export function stepActions(recipe) {
+  const arr = recipe.steps.map(n => n.split(' ').splice(0, 1)[0]);
+  return arr;
+}
 
-
-  
+export function removeLastCharacters(str, numberOfCharacters) {
+  return str.substring(0, str.length - numberOfCharacters);
+}
