@@ -34,3 +34,12 @@ export function totalCharacters(arr) {
   return num;
 
 }
+
+export function hasChildrenEntries(arr, character) {
+  let hasSpouse = false;
+  arr.forEach(char => {
+    if (char.name === character) hasSpouse = (char.spouse) ? true : false;
+  });
+
+  return hasSpouse;
+}

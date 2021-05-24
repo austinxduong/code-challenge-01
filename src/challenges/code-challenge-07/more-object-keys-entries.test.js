@@ -1,4 +1,4 @@
-import { getHouses, updateNumbers, totalCharacters } from './more-object-keys-entries.js';
+import { getHouses, updateNumbers, totalCharacters, hasChildrenEntries } from './more-object-keys-entries.js';
 
 const characters = [
   {
@@ -70,4 +70,13 @@ test('returns array of characters in data array', () => {
   expect(actual).toEqual(expected);
 
 });
+
+test('hasChildrenEntries', () => {
+  const input = characters; //arrange
+  const output1 = hasChildrenEntries(input, 'Eddard'); //act
+  const output2 = hasChildrenEntries(input, 'Euron');
+  expect(output1).toEqual(true); //assert
+  expect(output2).toEqual(false);
+});
+
 
